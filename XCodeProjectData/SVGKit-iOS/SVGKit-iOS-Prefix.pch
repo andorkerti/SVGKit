@@ -6,6 +6,35 @@
     #import <Foundation/Foundation.h>
     #import "DDLog.h"
 
+    #undef DDLogError
+    #undef DDLogWarn
+    #undef DDLogInfo
+    #undef DDLogDebug
+    #undef DDLogVerbose
+
+    #undef DDLogCError
+    #undef DDLogCWarn
+    #undef DDLogCInfo
+    #undef DDLogCDebug
+    #undef DDLogCVerbose
+
+
+    #define DDLogFatal(frmt, ...)
+    #define DDLogError(frmt, ...)
+    #define DDLogWarn(frmt, ...)
+    #define DDLogNotice(frmt, ...)
+    #define DDLogInfo(frmt, ...)
+    #define DDLogDebug(frmt, ...)
+    #define DDLogVerbose(frmt, ...)
+
+    #define DDLogCFatal(frmt, ...)
+    #define DDLogCError(frmt, ...)
+    #define DDLogCWarn(frmt, ...)
+    #define DDLogCNotice(frmt, ...)
+    #define DDLogCInfo(frmt, ...)
+    #define DDLogCDebug(frmt, ...)
+    #define DDLogCVerbose(frmt, ...)
+
     #if DEBUG
     static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     #else
